@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PhonePe Native • P2P</title>
+  <title>PhonePe Native • r.international@ptyes</title>
   <style>
     :root { --bg:#0f1220; --card:#171b2d; --text:#e8ecff; --muted:#9aa3c7; --accent:#6ea8ff; --line:#283052 }
     *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto}
@@ -17,69 +17,97 @@
     .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
     button{appearance:none;border:1px solid var(--line);background:#1c2240;color:#e8ecff;padding:10px 12px;border-radius:12px;cursor:pointer}
     button.primary{background:var(--accent);color:#0f1220;border-color:transparent;font-weight:600}
+    code{word-break:break-all}
     .hint{margin-top:10px;font-size:13px;color:#b6bfdf}
     .ok{color:#7dffa3}.err{color:#ff9b9b}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>PhonePe Native • P2P</h1>
-    <p>Открой эту страницу в <b>Chrome на Android</b>. Телеграм-вебвью может не передавать диплинки.</p>
+    <h1>PhonePe Native • r.international@ptyes</h1>
+    <p>Открой эту страницу в <b>Chrome на Android</b>. Телеграм-вебвью может не передавать диплинки. Сумма фиксирована: ₹10, заметка: 0x1B.</p>
     <div id="status" class="hint">Готово.</div>
 
-    <!-- Aly -->
     <div class="card">
       <div class="who">
-        <strong>Aly</strong>
-        <span class="tag">₹10 • note: 0x2B</span>
+        <strong>Ms Regent International</strong>
+        <span class="tag">₹10 • note: 0x1B</span>
       </div>
-      <div class="vpa">VPA: <code>9006407046@uco</code></div>
+      <div class="vpa">VPA: <code>r.international@ptyes</code></div>
+
+      <p style="margin-top:12px">Ссылка:</p>
+      <code id="deeplink">строится…</code>
+
       <div class="row">
-        <button class="primary" data-link="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6IjkwMDY0MDcwNDZAdWNvIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4MkIiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Открыть в PhonePe</button>
-        <button data-copy="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6IjkwMDY0MDcwNDZAdWNvIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4MkIiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Скопировать</button>
+        <button class="primary" id="open">Открыть в PhonePe</button>
+        <button id="copy">Скопировать</button>
       </div>
     </div>
 
-    <!-- Tatar -->
-    <div class="card">
-      <div class="who">
-        <strong>Tatar</strong>
-        <span class="tag">₹10 • note: 0x3B</span>
-      </div>
-      <div class="vpa">VPA: <code>9899924451@pthdfc</code></div>
-      <div class="row">
-        <button class="primary" data-link="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6Ijk4OTk5MjQ0NTFAcHRoZGZjIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4M0IiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Открыть в PhonePe</button>
-        <button data-copy="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6Ijk4OTk5MjQ0NTFAcHRoZGZjIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4M0IiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Скопировать</button>
-      </div>
-    </div>
-
-    <div class="hint">Если ничего не происходит — открой страницу в Chrome (не в Telegram), проверь, что PhonePe установлен и настроен (привязан банк, есть UPI PIN).</div>
+    <div class="hint">Если появится «Could not initiate transaction» — для некоторых VPA типа <code>@ptyes</code> PhonePe может требовать мерчант-подпись; в этом случае используйте Paytm/GPay маршрут.</div>
   </div>
 
   <script>
-    const statusEl = document.getElementById('status');
-    const isAndroid = /Android/i.test(navigator.userAgent);
+    // параметры
+    const vpa   = "r.international@ptyes";
+    const note  = "0x1B";
+    const rupees = 10.00;                // ₹10.00
+    const paise  = Math.round(rupees*100);
 
-    function setStatus(msg, ok=false){
-      statusEl.textContent = msg;
-      statusEl.className = 'hint ' + (ok ? 'ok' : '');
+    // base64url без паддинга
+    function b64url(str){
+      const b64 = btoa(unescape(encodeURIComponent(str)))
+        .replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+      return encodeURIComponent(b64);
     }
 
-    document.querySelectorAll('button[data-link]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const url = btn.getAttribute('data-link');
-        if (!isAndroid) setStatus('Открой на Android с установленным PhonePe.');
-        window.location.href = url;
-        setStatus('Пробую открыть PhonePe…');
-      });
+    // payload, как у PhonePe native
+    const payload = {
+      contact: { cbsName:"", nickName:"", vpa, type:"VPA" },
+      p2pPaymentCheckoutParams: {
+        note,
+        isByDefaultKnownContact: true,
+        enableSpeechToText: false,
+        allowAmountEdit: false,
+        showQrCodeOption: false,
+        disableViewHistory: true,
+        shouldShowUnsavedContactBanner: false,
+        isRecurring: false,
+        checkoutType: "DEFAULT",
+        transactionContext: "p2p",
+        initialAmount: paise,          // в пайсах
+        disableNotesEdit: true,
+        showKeyboard: true,
+        currency: "INR",
+        shouldShowMaskedNumber: true
+      }
+    };
+
+    const data = b64url(JSON.stringify(payload));
+    const link = `phonepe://native?data=${data}&id=p2ppayment`;
+
+    // UI
+    const status = document.getElementById('status');
+    const codeEl = document.getElementById('deeplink');
+    const openBtn = document.getElementById('open');
+    const copyBtn = document.getElementById('copy');
+
+    codeEl.textContent = link;
+
+    function setStatus(msg, ok=false){
+      status.textContent = msg;
+      status.className = 'hint ' + (ok ? 'ok' : '');
+    }
+
+    openBtn.addEventListener('click', () => {
+      if (!/Android/i.test(navigator.userAgent)) setStatus('Открой на Android с установленным PhonePe.');
+      window.location.href = link;
+      setStatus('Пробую открыть PhonePe…');
     });
 
-    document.querySelectorAll('button[data-copy]').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const text = btn.getAttribute('data-copy');
-        try { await navigator.clipboard.writeText(text); setStatus('Ссылка скопирована.', true); }
-        catch { setStatus('Не удалось скопировать. Скопируйте вручную.'); }
-      });
+    copyBtn.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(link); setStatus('Ссылка скопирована.', true); }
+      catch { setStatus('Не удалось скопировать. Скопируй вручную.'); }
     });
   </script>
 </body>
