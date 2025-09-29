@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PhonePe Native • P2P</title>
+  <style>
+    :root { --bg:#0f1220; --card:#171b2d; --text:#e8ecff; --muted:#9aa3c7; --accent:#6ea8ff; --line:#283052 }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto}
+    .wrap{max-width:720px;margin:0 auto;padding:28px}
+    h1{margin:0 0 6px;font-size:22px}
+    p{margin:0 0 14px;color:var(--muted)}
+    .card{background:#151a31;border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
+    .who{display:flex;justify-content:space-between;align-items:center}
+    .tag{font-size:12px;border:1px solid var(--line);padding:2px 8px;border-radius:999px;color:#c7cff4}
+    .vpa{font-family:ui-monospace,Menlo,Consolas,monospace;color:#cfd6ff;margin-top:8px}
+    .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    button{appearance:none;border:1px solid var(--line);background:#1c2240;color:#e8ecff;padding:10px 12px;border-radius:12px;cursor:pointer}
+    button.primary{background:var(--accent);color:#0f1220;border-color:transparent;font-weight:600}
+    .hint{margin-top:10px;font-size:13px;color:#b6bfdf}
+    .ok{color:#7dffa3}.err{color:#ff9b9b}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>PhonePe Native • P2P</h1>
+    <p>Открой эту страницу в <b>Chrome на Android</b>. Телеграм-вебвью может не передавать диплинки.</p>
+    <div id="status" class="hint">Готово.</div>
+
+    <!-- Aly -->
+    <div class="card">
+      <div class="who">
+        <strong>Aly</strong>
+        <span class="tag">₹10 • note: 0x2B</span>
+      </div>
+      <div class="vpa">VPA: <code>9006407046@uco</code></div>
+      <div class="row">
+        <button class="primary" data-link="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6IjkwMDY0MDcwNDZAdWNvIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4MkIiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Открыть в PhonePe</button>
+        <button data-copy="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6IjkwMDY0MDcwNDZAdWNvIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4MkIiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Скопировать</button>
+      </div>
+    </div>
+
+    <!-- Tatar -->
+    <div class="card">
+      <div class="who">
+        <strong>Tatar</strong>
+        <span class="tag">₹10 • note: 0x3B</span>
+      </div>
+      <div class="vpa">VPA: <code>9899924451@pthdfc</code></div>
+      <div class="row">
+        <button class="primary" data-link="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6Ijk4OTk5MjQ0NTFAcHRoZGZjIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4M0IiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Открыть в PhonePe</button>
+        <button data-copy="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6Ijk4OTk5MjQ0NTFAcHRoZGZjIiwidHlwZSI6IlZQQSJ9LCJwMnBQYXltZW50Q2hlY2tvdXRQYXJhbXMiOnsibm90ZSI6IjB4M0IiLCJpc0J5RGVmYXVsdEtub3duQ29udGFjdCI6dHJ1ZSwiZW5hYmxlU3BlZWNoVG9UZXh0IjpmYWxzZSwiYWxsb3dBbW91bnRFZGl0IjpmYWxzZSwic2hvd1FyQ29kZU9wdGlvbiI6ZmFsc2UsImRpc2FibGVWaWV3SGlzdG9yeSI6dHJ1ZSwic2hvdWxkU2hvd1Vuc2F2ZWRDb250YWN0QmFubmVyIjpmYWxzZSwiaXNSZWN1cnJpbmciOmZhbHNlLCJjaGVja291dFR5cGUiOiJERUZBVUxUIiwidHJhbnNhY3Rpb25Db250ZXh0IjoicDJwIiwiaW5pdGlhbEFtb3VudCI6MTAwMCwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZSwic2hvd0tleWJvYXJkIjp0cnVlLCJjdXJyZW5jeSI6IklOUiIsInNob3VsZFNob3dNYXNrZWROdW1iZXIiOnRydWV9fQ&id=p2ppayment">Скопировать</button>
+      </div>
+    </div>
+
+    <div class="hint">Если ничего не происходит — открой страницу в Chrome (не в Telegram), проверь, что PhonePe установлен и настроен (привязан банк, есть UPI PIN).</div>
+  </div>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const isAndroid = /Android/i.test(navigator.userAgent);
+
+    function setStatus(msg, ok=false){
+      statusEl.textContent = msg;
+      statusEl.className = 'hint ' + (ok ? 'ok' : '');
+    }
+
+    document.querySelectorAll('button[data-link]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const url = btn.getAttribute('data-link');
+        if (!isAndroid) setStatus('Открой на Android с установленным PhonePe.');
+        window.location.href = url;
+        setStatus('Пробую открыть PhonePe…');
+      });
+    });
+
+    document.querySelectorAll('button[data-copy]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const text = btn.getAttribute('data-copy');
+        try { await navigator.clipboard.writeText(text); setStatus('Ссылка скопирована.', true); }
+        catch { setStatus('Не удалось скопировать. Скопируйте вручную.'); }
+      });
+    });
+  </script>
+</body>
+</html>
