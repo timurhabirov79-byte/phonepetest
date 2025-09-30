@@ -3,112 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PhonePe Native • r.international@ptyes</title>
+  <title>UPI Deep Links — Paytm & PhonePe</title>
   <style>
-    :root { --bg:#0f1220; --card:#171b2d; --text:#e8ecff; --muted:#9aa3c7; --accent:#6ea8ff; --line:#283052 }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto}
-    .wrap{max-width:720px;margin:0 auto;padding:28px}
-    h1{margin:0 0 6px;font-size:22px}
-    p{margin:0 0 14px;color:var(--muted)}
-    .card{background:#151a31;border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
-    .who{display:flex;justify-content:space-between;align-items:center}
-    .tag{font-size:12px;border:1px solid var(--line);padding:2px 8px;border-radius:999px;color:#c7cff4}
-    .vpa{font-family:ui-monospace,Menlo,Consolas,monospace;color:#cfd6ff;margin-top:8px}
-    .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    button{appearance:none;border:1px solid var(--line);background:#1c2240;color:#e8ecff;padding:10px 12px;border-radius:12px;cursor:pointer}
-    button.primary{background:var(--accent);color:#0f1220;border-color:transparent;font-weight:600}
-    code{word-break:break-all}
-    .hint{margin-top:10px;font-size:13px;color:#b6bfdf}
-    .ok{color:#7dffa3}.err{color:#ff9b9b}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:24px;background:#0b0b0c;color:#e9eaee}
+    .card{max-width:720px;margin:0 auto;background:#141417;border:1px solid #222;border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+    h1{font-size:22px;margin:0 0 12px}
+    .meta{font:14px/1.4 monospace;color:#b7bac3;margin:6px 0}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    a.btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid #2a2a2f;text-decoration:none;background:#1f1f25;color:#fff}
+    a.btn:hover{background:#25252c}
+    .url{margin-top:10px;font:12px/1.45 monospace;color:#9aa0aa;word-break:break-all}
+    .hint{margin-top:14px;color:#8b90a0;font-size:13px}
+    code{background:#1a1a1f;padding:2px 6px;border-radius:6px}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>PhonePe Native • r.international@ptyes</h1>
-    <p>Открой эту страницу в <b>Chrome на Android</b>. Телеграм-вебвью может не передавать диплинки. Сумма фиксирована: ₹10, заметка: 0x1B.</p>
-    <div id="status" class="hint">Готово.</div>
+  <div class="card">
+    <h1>UPI тестовые ссылки</h1>
+    <div class="meta">VPA: <code>8983778848@ptyes</code></div>
+    <div class="meta">Amount: <code>10.00 INR</code></div>
+    <div class="meta">note (tn): <code>0x1D-ORD-1759225014012</code></div>
+    <div class="meta">tr: <code>ORD-1759225014012</code></div>
 
-    <div class="card">
-      <div class="who">
-        <strong>Ms Regent International</strong>
-        <span class="tag">₹10 • note: 0x1B</span>
-      </div>
-      <div class="vpa">VPA: <code>r.international@ptyes</code></div>
-
-      <p style="margin-top:12px">Ссылка:</p>
-      <code id="deeplink">строится…</code>
-
-      <div class="row">
-        <button class="primary" id="open">Открыть в PhonePe</button>
-        <button id="copy">Скопировать</button>
-      </div>
+    <div class="btns">
+      <a class="btn" id="paytmBtn"
+         href="paytmmp://cash_wallet?pa=8983778848%40ptyes&pn=PAYMENT&tn=0x1D-ORD-1759225014012&am=10.00&cu=INR&featuretype=money_transfer&tr=ORD-1759225014012">
+         Открыть в Paytm
+      </a>
+      <a class="btn" id="ppBtn"
+         href="phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6Ijg5ODM3Nzg4NDhAcHR5ZXMiLCJ0eXBlIjoiVlBBIn0sInAycFBheW1lbnRDaGVja291dFBhcmFtcyI6eyJub3RlIjoiMHgxRC1PUkQtMTc1OTIyNTAxNDAxMiIsImlzQnlEZWZhdWx0S25vd25Db250YWN0Ijp0cnVlLCJlbmFibGVTcGVlY2hUb1RleHQiOmZhbHNlLCJhbGxvd0Ftb3VudEVkaXQiOmZhbHNlLCJzaG93UXJDb2RlT3B0aW9uIjpmYWxzZSwiZGlzYWJsZVZpZXdIaXN0b3J5Ijp0cnVlLCJzaG91bGRTaG93VW5zYXZlZENvbnRhY3RCYW5uZXIiOmZhbHNlLCJpc1JlY3VycmluZyI6ZmFsc2UsImNoZWNrb3V0VHlwZSI6IkRFRkFVTFQiLCJ0cmFuc2FjdGlvbkNvbnRleHQiOiJwMnAiLCJpbml0aWFsQW1vdW50IjoxMDAwLCJjdXJyZW5jeSI6IklOViIsInNob3dLZXlib2FyZCI6dHJ1ZSwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZX0sImlkIjoicDJwcGF5bWVudCJ9">
+         Открыть в PhonePe
+      </a>
     </div>
 
-    <div class="hint">Если появится «Could not initiate transaction» — для некоторых VPA типа <code>@ptyes</code> PhonePe может требовать мерчант-подпись; в этом случае используйте Paytm/GPay маршрут.</div>
+    <div class="hint">Если ссылка не открывается из вашего браузера — скопируйте URL ниже и откройте на Android-устройстве.</div>
+
+    <div class="url" id="paytmUrl">
+      paytmmp://cash_wallet?pa=8983778848%40ptyes&pn=PAYMENT&tn=0x1D-ORD-1759225014012&am=10.00&cu=INR&featuretype=money_transfer&tr=ORD-1759225014012
+    </div>
+    <div class="url" id="ppUrl">
+      phonepe://native?data=eyJjb250YWN0Ijp7ImNic05hbWUiOiIiLCJuaWNrTmFtZSI6IiIsInZwYSI6Ijg5ODM3Nzg4NDhAcHR5ZXMiLCJ0eXBlIjoiVlBBIn0sInAycFBheW1lbnRDaGVja291dFBhcmFtcyI6eyJub3RlIjoiMHgxRC1PUkQtMTc1OTIyNTAxNDAxMiIsImlzQnlEZWZhdWx0S25vd25Db250YWN0Ijp0cnVlLCJlbmFibGVTcGVlY2hUb1RleHQiOmZhbHNlLCJhbGxvd0Ftb3VudEVkaXQiOmZhbHNlLCJzaG93UXJDb2RlT3B0aW9uIjpmYWxzZSwiZGlzYWJsZVZpZXdIaXN0b3J5Ijp0cnVlLCJzaG91bGRTaG93VW5zYXZlZENvbnRhY3RCYW5uZXIiOmZhbHNlLCJpc1JlY3VycmluZyI6ZmFsc2UsImNoZWNrb3V0VHlwZSI6IkRFRkFVTFQiLCJ0cmFuc2FjdGlvbkNvbnRleHQiOiJwMnAiLCJpbml0aWFsQW1vdW50IjoxMDAwLCJjdXJyZW5jeSI6IklOViIsInNob3dLZXlib2FyZCI6dHJ1ZSwiZGlzYWJsZU5vdGVzRWRpdCI6dHJ1ZX0sImlkIjoicDJwcGF5bWVudCJ9
+    </div>
   </div>
-
-  <script>
-    // параметры
-    const vpa   = "r.international@ptyes";
-    const note  = "0x1B";
-    const rupees = 10.00;                // ₹10.00
-    const paise  = Math.round(rupees*100);
-
-    // base64url без паддинга
-    function b64url(str){
-      const b64 = btoa(unescape(encodeURIComponent(str)))
-        .replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
-      return encodeURIComponent(b64);
-    }
-
-    // payload, как у PhonePe native
-    const payload = {
-      contact: { cbsName:"", nickName:"", vpa, type:"VPA" },
-      p2pPaymentCheckoutParams: {
-        note,
-        isByDefaultKnownContact: true,
-        enableSpeechToText: false,
-        allowAmountEdit: false,
-        showQrCodeOption: false,
-        disableViewHistory: true,
-        shouldShowUnsavedContactBanner: false,
-        isRecurring: false,
-        checkoutType: "DEFAULT",
-        transactionContext: "p2p",
-        initialAmount: paise,          // в пайсах
-        disableNotesEdit: true,
-        showKeyboard: true,
-        currency: "INR",
-        shouldShowMaskedNumber: true
-      }
-    };
-
-    const data = b64url(JSON.stringify(payload));
-    const link = `phonepe://native?data=${data}&id=p2ppayment`;
-
-    // UI
-    const status = document.getElementById('status');
-    const codeEl = document.getElementById('deeplink');
-    const openBtn = document.getElementById('open');
-    const copyBtn = document.getElementById('copy');
-
-    codeEl.textContent = link;
-
-    function setStatus(msg, ok=false){
-      status.textContent = msg;
-      status.className = 'hint ' + (ok ? 'ok' : '');
-    }
-
-    openBtn.addEventListener('click', () => {
-      if (!/Android/i.test(navigator.userAgent)) setStatus('Открой на Android с установленным PhonePe.');
-      window.location.href = link;
-      setStatus('Пробую открыть PhonePe…');
-    });
-
-    copyBtn.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(link); setStatus('Ссылка скопирована.', true); }
-      catch { setStatus('Не удалось скопировать. Скопируй вручную.'); }
-    });
-  </script>
 </body>
 </html>
